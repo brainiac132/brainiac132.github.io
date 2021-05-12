@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,27 +9,30 @@
     <link rel="stylesheet" href="main.css">
     <title>Document</title>
 </head>
-<body>
-    <div class = "black-jack">
-        <div class = "black-jack">
-            <h1>BlackJack</h1>
-            
-            <div class = "main">
-                <div class = "options">
-                    <input type = "button" id = "start" class = "button">
-                    <input type = "button" id = 'btn' class = 'hit me'>
-                    <input type = button id = 'btn' class = 'stay'>
-                </div>
-                <div class = 'status' id = 'status'></div>
-            <div id = 'cards' class = 'cards'>
-                <div id = 'NumberofCard'>52</div>
-            </div>
-            <div id = 'players' class = 'players'>
 
-            </div>
-            <div class = 'clear'></div>
+<body>
+    <div class="black-jack">
+        <div class="black-jack">
+            <h1>BlackJack</h1>
+
+            <div class="main">
+                <div>
+                    <button id="start">start</button>
+                    <button id="hitMe">hit me</button>
+                    <button id="stay">stay</button>
+                </div>
+                <div class='status' id='status'></div>
+                <div>
+                    <div id='cardsRemaining'>52</div>
+                </div>
+                <div id='cardContainer'>
+                    <div id="playerHand"></div>
+                    <div id="dealerHand"></div>
+
+                </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>
