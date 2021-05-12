@@ -56,18 +56,23 @@ function shuffle(array) {
 shuffle(DECK)
 console.log(DECK)
 
-//create a function to deal cards 
+//create a function to deal cards console.log(deck.pop), append it to a div
 function dealHand() {
     if (playerHand.length == 0 && dealerHand.length == 0) {
         for (let i = 1; i <= 4; i++) {
             let cardToDeal = DECK.pop();
+            console.log(cardToDeal)
             if (i % 2 == 0) {
-                playerHand.push(cardToDeal);
-                continue;
+                playerHand.push(cardToDeal)
+                continue
             }
             dealerHand.push(cardToDeal)
+            
         }
     }
 }
-console.log(dealHand())
+dealHand()
+
+console.log(dealerHand)
+console.log (playerHand)
 //create a function to connect cards to a div element
