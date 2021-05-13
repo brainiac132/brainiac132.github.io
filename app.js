@@ -67,12 +67,70 @@ function dealHand() {
                 continue
             }
             dealerHand.push(cardToDeal)
-            
+
         }
     }
 }
 dealHand()
 
 console.log(dealerHand)
-console.log (playerHand)
+console.log(playerHand)
 //create a function to connect cards to a div element
+
+//create a function to hit
+function dealHit() {
+    let cardToDeal = DECK.pop()
+    console.log(cardToDeal)
+    playerHand.push(cardToDeal)
+    
+}
+document.getElementById('hitMe').addEventListener('click', dealHit)
+
+//create a function to check win
+
+function checkWin() {
+    let playerHandValue = 0;
+    debugger
+
+    //Create a loop over the player's hand
+    for (let i = 0; i < playerHand.length; i++) {
+        //set playerHandValue to the sum of the numbers in the player's array
+     playerHandValue += playerHand[i].value
+        console.log(playerHandValue)
+    }
+}
+// // //Statement of if playerHandValue is > 21, then player loses
+// if () {
+//     console.log("The player loses")
+//     // } // statement of if the playerHandValue is < dealerHandValue && dealerHandValue is <= 21 
+//     else if () {
+//         console.log("The player loses")
+
+//     // } //If the dealerHandValue is > 21, && playerHandValue <= 21
+//     else if () {
+//             console.log("The player wins")
+
+//     // }//If the dealerHandValue is < 21 && playerHandValue is > dealerHandValue && playerHandValue is <=21, player wins
+//     else if () {
+//                 console.log("the player wins")
+//     // } //if the dealerHandValue === playerHandValue, tie/push
+//     else if () {
+//                     console.log("push")
+//                 }
+
+//                 checkWin()
+
+// function end()
+// {
+//     var winner = -1;
+//     var score = 0;
+//     for(var i = 0; i < playerHand.length; i++)
+//     {
+//         if (playerHand[i].Points > score && players[i].Points < 22)
+//         {
+//             winner = i;
+//         }
+//         score = players[i].Points;
+//     }
+//     document.getElementById('status').innerHTML = 'Winner: Player ' + players[winner].ID;
+// }
