@@ -95,36 +95,38 @@ function checkWin() {
     //Create a loop over the player's hand
     for (let i = 0; i < playerHand.length; i++) {
         //set playerHandValue to the sum of the numbers in the player's array
-     playerHandValue += playerHand[i].value
+        playerHandValue += playerHand[i].value
         console.log(playerHandValue)
-    }for (let i = 0; i < dealerHand.length; i++) {
+    } for (let i = 0; i < dealerHand.length; i++) {
         //set playerHandValue to the sum of the numbers in the player's array
-     dealerHandValue += dealerHand[i].value
+        dealerHandValue += dealerHand[i].value
         console.log(dealerHandValue)
     }
 
-// //Statement of if playerHandValue is > 21, then player loses
-if (playerHandValue > 21 || (playerHandValue < dealerHandValue && dealerHandValue <= 21)) {
-    console.log("The player loses")
-}
-}
+    // //Statement of if playerHandValue is > 21, then player loses
+    if (playerHandValue > 21 || (playerHandValue < dealerHandValue && dealerHandValue <= 21)) {
+        console.log("The player loses")
+    }
+
     // // } // statement of if the playerHandValue is < dealerHandValue && dealerHandValue is <= 21 
     // else if () {
     //     console.log("The player loses")
 
-    // // } //If the dealerHandValue is > 21, && playerHandValue <= 21
+    // } //If the dealerHandValue is > 21, && playerHandValue <= 21
+    else if ((dealerHandValue > 21 || playerHandValue > dealerHandValue) && (dealerHandValue <= 21)) {
+        console.log("The player wins")
+    }
+
+    // // }//If the dealerHandValue is < 21 && playerHandValue is > dealerHandValue && playerHandValue is <=21, player wins
     // else if () {
-    //         console.log("The player wins")
+    //             console.log("the player wins")
+    // } //if the dealerHandValue === playerHandValue, tie/push
+    else if (dealerHandValue == playerHandValue) {
+        console.log("push/tie")
+    }
+}
 
-//     // }//If the dealerHandValue is < 21 && playerHandValue is > dealerHandValue && playerHandValue is <=21, player wins
-//     else if () {
-//                 console.log("the player wins")
-//     // } //if the dealerHandValue === playerHandValue, tie/push
-//     else if () {
-//                     console.log("push")
-//                 }
-
-//                 checkWin()
+checkWin()
 
 // function end()
 // {
