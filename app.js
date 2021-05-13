@@ -82,7 +82,7 @@ function dealHit() {
     let cardToDeal = DECK.pop()
     console.log(cardToDeal)
     playerHand.push(cardToDeal)
-    
+    checkWin()
 }
 document.getElementById('hitMe').addEventListener('click', dealHit)
 
@@ -90,25 +90,31 @@ document.getElementById('hitMe').addEventListener('click', dealHit)
 
 function checkWin() {
     let playerHandValue = 0;
-    debugger
+    let dealerHandValue = 0
 
     //Create a loop over the player's hand
     for (let i = 0; i < playerHand.length; i++) {
         //set playerHandValue to the sum of the numbers in the player's array
      playerHandValue += playerHand[i].value
         console.log(playerHandValue)
+    }for (let i = 0; i < dealerHand.length; i++) {
+        //set playerHandValue to the sum of the numbers in the player's array
+     dealerHandValue += dealerHand[i].value
+        console.log(dealerHandValue)
     }
-}
-// // //Statement of if playerHandValue is > 21, then player loses
-// if () {
-//     console.log("The player loses")
-//     // } // statement of if the playerHandValue is < dealerHandValue && dealerHandValue is <= 21 
-//     else if () {
-//         console.log("The player loses")
 
-//     // } //If the dealerHandValue is > 21, && playerHandValue <= 21
-//     else if () {
-//             console.log("The player wins")
+// //Statement of if playerHandValue is > 21, then player loses
+if (playerHandValue > 21 || (playerHandValue < dealerHandValue && dealerHandValue <= 21)) {
+    console.log("The player loses")
+}
+}
+    // // } // statement of if the playerHandValue is < dealerHandValue && dealerHandValue is <= 21 
+    // else if () {
+    //     console.log("The player loses")
+
+    // // } //If the dealerHandValue is > 21, && playerHandValue <= 21
+    // else if () {
+    //         console.log("The player wins")
 
 //     // }//If the dealerHandValue is < 21 && playerHandValue is > dealerHandValue && playerHandValue is <=21, player wins
 //     else if () {
@@ -133,4 +139,4 @@ function checkWin() {
 //         score = players[i].Points;
 //     }
 //     document.getElementById('status').innerHTML = 'Winner: Player ' + players[winner].ID;
-// }
+// 
